@@ -3,9 +3,10 @@ from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    path('', views.home),
-    path('dashboard/', views.dashboard),
-    path('customer/', views.customer),
-    path('about/', views.about),
-    path('contact/', views.contact),
+    path('', views.home, name='home'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('customer/<str:pk>/', views.customer, name='customer'),
+    path('order/', views.createOrder, name='order'),
+    path('update_order/<str:pk>/', views.updateOrder, name='update_order'),
+    path('delete_order/<str:pk>/', views.deleteOrder, name='delete_order'),
 ]
