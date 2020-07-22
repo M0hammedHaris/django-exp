@@ -1,0 +1,7 @@
+.vscode/
+
+/vnev/
+
+db.sqlite3
+
+*.pyc
